@@ -2938,7 +2938,7 @@ function woocommerce_coupon_is_valid_for_market( $valid, $coupon, $discount ) {
     }
 
     /**
-     * GL-149 Coupon wyłącznie dla marketów - które go obsługują
+     * GL-155 Coupon wyłącznie dla marketów - które go obsługują
      */
     $allowed_markets = get_post_meta( $coupon_id, 'markets', true );
     if ( !empty( $allowed_markets ) ) {
