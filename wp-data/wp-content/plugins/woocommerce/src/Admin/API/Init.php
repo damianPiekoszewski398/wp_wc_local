@@ -93,7 +93,6 @@ class Init {
 			'Automattic\WooCommerce\Admin\API\OnboardingTasks',
 			'Automattic\WooCommerce\Admin\API\OnboardingThemes',
 			'Automattic\WooCommerce\Admin\API\OnboardingPlugins',
-			'Automattic\WooCommerce\Admin\API\OnboardingProducts',
 			'Automattic\WooCommerce\Admin\API\NavigationFavorites',
 			'Automattic\WooCommerce\Admin\API\Taxes',
 			'Automattic\WooCommerce\Admin\API\MobileAppMagicLink',

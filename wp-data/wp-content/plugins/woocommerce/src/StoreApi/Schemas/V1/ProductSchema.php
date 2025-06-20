@@ -498,6 +498,23 @@ class ProductSchema extends AbstractSchema {
 	 * @return array
 	 */
 	protected function get_images( \WC_Product $product ) {
+        if( $product->meta_exists('_gp_product_img_url') ) {
+            $url_image = $product->get_meta('_gp_product_img_url');
+            $url_image_name = pathinfo($url_image)['filename'];
+
+            return [
+                0 => [
+                    'id'        => null,
+                    'src'       => $url_image,
+                    'thumbnail' => $url_image,
+                    'srcset'    => $url_image,
+                    'sizes'     => $url_image,
+                    'name'      => $url_image_name,
+                    'alt'       => $product->get_title(),
+                ]
+            ];
+        }
+
 		$attachment_ids = array_merge( [ $product->get_image_id() ], $product->get_gallery_image_ids() );
 
 		return array_values( array_filter( array_map( [ $this->image_attachment_schema, 'get_item_response' ], $attachment_ids ) ) );

@@ -210,35 +210,25 @@ class BlockTemplateLogger {
 	}
 
 	/**
-	 * Get all template events for a given template as a JSON like array.
+	 * Get all template events for a given template.
 	 *
 	 * @param string $template_id Template ID.
 	 */
-	public function template_events_to_json( string $template_id ): array {
+	public function get_formatted_template_events( string $template_id ): array {
 		if ( ! isset( $this->all_template_events[ $template_id ] ) ) {
 			return array();
 		}
 
 		$template_events = $this->all_template_events[ $template_id ];
+		$template        = $this->templates[ $template_id ];
 
-		return $this->to_json( $template_events );
-	}
-
-	/**
-	 * Get all template events as a JSON like array.
-	 *
-	 * @param array $template_events Template events.
-	 *
-	 * @return array The JSON.
-	 */
-	private function to_json( array $template_events ): array {
-		$json = array();
+		$formatted_template_events = array();
 
 		foreach ( $template_events as $template_event ) {
 			$container = $template_event['container'];
 			$block     = $template_event['block'];
 
-			$json[] = array(
+			$formatted_template_events[] = array(
 				'level'           => $template_event['level'],
 				'event_type'      => $template_event['event_type'],
 				'message'         => $template_event['message'],
@@ -256,7 +246,7 @@ class BlockTemplateLogger {
 			);
 		}
 
-		return $json;
+		return $formatted_template_events;
 	}
 
 	/**
@@ -321,7 +311,7 @@ class BlockTemplateLogger {
 	 * @param array $template_events Template events.
 	 */
 	private function generate_template_events_hash( array $template_events ): string {
-		return md5( wp_json_encode( $this->to_json( $template_events ) ) );
+		return md5( wp_json_encode( $template_events ) );
 	}
 
 	/**

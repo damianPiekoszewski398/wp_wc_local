@@ -5,7 +5,7 @@
  * Categories: WooCommerce
  */
 
-use Automattic\WooCommerce\Blocks\AIContent\PatternsHelper;
+use Automattic\WooCommerce\Blocks\Patterns\PatternsHelper;
 
 $category_title = $content['titles'][0]['default'] ?? '';
 

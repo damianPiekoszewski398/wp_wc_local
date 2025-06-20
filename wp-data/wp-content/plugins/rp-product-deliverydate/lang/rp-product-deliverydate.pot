@@ -1,0 +1,1260 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-10 01:00+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: lib/Rpesp_Admin.php:24
+msgid "Delivery Time(In Day)"
+msgstr ""
+
+#: lib/Rpesp_Admin.php:25
+msgid "Delivery Time To Carrier (In Day)"
+msgstr ""
+
+#: lib/Rpesp_Admin.php:26
+msgid "Delivery Time Text"
+msgstr ""
+
+#: lib/Rpesp_Admin.php:27
+msgid "Alternative Delivery Time Text"
+msgstr ""
+
+#: lib/Rpesp_Admin.php:28
+msgid "Delivery Time Order Text"
+msgstr ""
+
+#: lib/Rpesp_Admin.php:31
+msgid "Delivery Time(In Day) For Outofstock"
+msgstr ""
+
+#: lib/Rpesp_Admin.php:32
+msgid "Delivery Time To Carrier(In Day) For Outofstock"
+msgstr ""
+
+#: lib/Rpesp_Admin.php:33
+msgid "Delivery Time Text For Outofstock"
+msgstr ""
+
+#: lib/Rpesp_Admin.php:36
+msgid "Delivery Time(In Day) For Backorder"
+msgstr ""
+
+#: lib/Rpesp_Admin.php:37
+msgid "Delivery Time To Carrier(In Day) For Backorder"
+msgstr ""
+
+#: lib/Rpesp_Admin.php:38
+msgid "Delivery Time Text For Backorder"
+msgstr ""
+
+#: lib/Rpesp_Admin.php:39
+msgid "Alternative Delivery Time Text For Backorder"
+msgstr ""
+
+#: lib/Rpesp_Front.php:147
+msgid "Delivery text html."
+msgstr ""
+
+#: lib/Rpesp_Front.php:163 lib/Rpesp_Front.php:180 lib/Rpesp_Front.php:195
+msgid "Delivery time."
+msgstr ""
+
+#: lib/Rpesp_Front.php:1706 view/admin/global/tabs/day-off.php:108
+msgid "Hours"
+msgstr ""
+
+#: lib/Rpesp_Front.php:1706 lib/Rpesp_Front.php:1708
+msgid "Minutes"
+msgstr ""
+
+#: lib/Rpesp_Main.php:111
+msgid "Sunday"
+msgstr ""
+
+#: lib/Rpesp_Main.php:112
+msgid "Monday"
+msgstr ""
+
+#: lib/Rpesp_Main.php:113
+msgid "Tuesday"
+msgstr ""
+
+#: lib/Rpesp_Main.php:114
+msgid "Wednesday"
+msgstr ""
+
+#: lib/Rpesp_Main.php:115
+msgid "Thursday"
+msgstr ""
+
+#: lib/Rpesp_Main.php:116
+msgid "Friday"
+msgstr ""
+
+#: lib/Rpesp_Main.php:117
+msgid "Saturday"
+msgstr ""
+
+#: lib/Rpesp_Main.php:121
+msgid "January"
+msgstr ""
+
+#: lib/Rpesp_Main.php:122
+msgid "February"
+msgstr ""
+
+#: lib/Rpesp_Main.php:123
+msgid "March"
+msgstr ""
+
+#: lib/Rpesp_Main.php:124
+msgid "April"
+msgstr ""
+
+#: lib/Rpesp_Main.php:125
+msgid "May"
+msgstr ""
+
+#: lib/Rpesp_Main.php:126
+msgid "June"
+msgstr ""
+
+#: lib/Rpesp_Main.php:127
+msgid "July"
+msgstr ""
+
+#: lib/Rpesp_Main.php:128
+msgid "August"
+msgstr ""
+
+#: lib/Rpesp_Main.php:129
+msgid "September"
+msgstr ""
+
+#: lib/Rpesp_Main.php:130
+msgid "October"
+msgstr ""
+
+#: lib/Rpesp_Main.php:131
+msgid "November"
+msgstr ""
+
+#: lib/Rpesp_Main.php:132
+msgid "December"
+msgstr ""
+
+#: view/admin/imageinput.php:16 view/admin/global/dayoff-field-row.php:35
+#: view/admin/global/dayoff-field-row.php:102
+#: view/admin/global/specific-day.php:36
+#: view/admin/global/specific-period.php:70
+msgid "Remove"
+msgstr ""
+
+#: view/admin/settings.php:4
+msgid "Settings have been updated!"
+msgstr ""
+
+#: view/admin/settings.php:9
+msgid "General Settings"
+msgstr ""
+
+#: view/admin/settings.php:10
+msgid "Display Settings"
+msgstr ""
+
+#: view/admin/settings.php:11
+msgid "Delivery Text Settings"
+msgstr ""
+
+#: view/admin/settings.php:12
+msgid "Day Off Settings"
+msgstr ""
+
+#: view/admin/settings.php:13
+msgid "Design Settings"
+msgstr ""
+
+#: view/admin/settings.php:14
+msgid "Shipping Delivery Time"
+msgstr ""
+
+#: view/admin/global/dayoff-field-row.php:6
+#: view/admin/global/dayoff-field-row.php:42
+#: view/admin/global/dayoff-field-row.php:73
+#: view/admin/global/specific-day.php:4
+#: view/admin/global/specific-period.php:4
+#: view/admin/global/specific-period.php:38
+msgid "Select Day"
+msgstr ""
+
+#: view/admin/global/dayoff-field-row.php:16
+#: view/admin/global/dayoff-field-row.php:52
+#: view/admin/global/dayoff-field-row.php:83
+#: view/admin/global/specific-day.php:15
+#: view/admin/global/specific-period.php:15
+#: view/admin/global/specific-period.php:49
+msgid "Select Month"
+msgstr ""
+
+#: view/admin/global/dayoff-field-row.php:26
+#: view/admin/global/dayoff-field-row.php:62
+#: view/admin/global/dayoff-field-row.php:93
+#: view/admin/global/specific-day.php:26
+#: view/admin/global/specific-period.php:26
+#: view/admin/global/specific-period.php:60
+msgid "Select Year"
+msgstr ""
+
+#: view/admin/global/dayoff-field-row.php:27
+#: view/admin/global/dayoff-field-row.php:63
+#: view/admin/global/dayoff-field-row.php:94
+#: view/admin/global/specific-day.php:27
+#: view/admin/global/specific-period.php:27
+#: view/admin/global/specific-period.php:61
+msgid "Every year"
+msgstr ""
+
+#: view/admin/global/dokan-general-fields.php:6
+#: view/admin/global/wcfm-general-fields.php:6
+msgid "Allow vendor to change delivery time?"
+msgstr ""
+
+#: view/admin/global/dokan-general-fields.php:13
+#: view/admin/global/wcfm-general-fields.php:13
+#: view/admin/global/tabs/delivery-text.php:11
+#: view/admin/global/tabs/delivery-text.php:29
+#: view/admin/global/tabs/design-setting.php:17
+#: view/admin/global/tabs/design-setting.php:35
+#: view/admin/global/tabs/display.php:11 view/admin/global/tabs/display.php:42
+#: view/admin/global/tabs/display.php:74 view/admin/global/tabs/display.php:92
+#: view/admin/global/tabs/display.php:110
+#: view/admin/global/tabs/general.php:30 view/admin/global/tabs/general.php:49
+#: view/admin/global/tabs/general.php:82
+#: view/admin/global/tabs/general.php:101
+#: view/admin/global/tabs/general.php:137
+#: view/admin/global/tabs/general.php:173
+#: view/admin/global/tabs/general.php:192
+#: view/admin/global/tabs/general.php:211
+#: view/admin/global/tabs/general.php:229
+msgid "Yes"
+msgstr ""
+
+#: view/admin/global/dokan-general-fields.php:20
+#: view/admin/global/wcfm-general-fields.php:20
+#: view/admin/global/tabs/delivery-text.php:16
+#: view/admin/global/tabs/delivery-text.php:34
+#: view/admin/global/tabs/design-setting.php:22
+#: view/admin/global/tabs/design-setting.php:40
+#: view/admin/global/tabs/display.php:16 view/admin/global/tabs/display.php:47
+#: view/admin/global/tabs/display.php:79 view/admin/global/tabs/display.php:97
+#: view/admin/global/tabs/display.php:115
+#: view/admin/global/tabs/general.php:35 view/admin/global/tabs/general.php:54
+#: view/admin/global/tabs/general.php:87
+#: view/admin/global/tabs/general.php:106
+#: view/admin/global/tabs/general.php:142
+#: view/admin/global/tabs/general.php:178
+#: view/admin/global/tabs/general.php:197
+#: view/admin/global/tabs/general.php:216
+#: view/admin/global/tabs/general.php:234
+msgid "No"
+msgstr ""
+
+#: view/admin/global/tabs/day-off.php:5
+msgid "Week Day Off"
+msgstr ""
+
+#: view/admin/global/tabs/day-off.php:21
+msgid "Specific Day Off"
+msgstr ""
+
+#: view/admin/global/tabs/day-off.php:27
+msgid "Day"
+msgstr ""
+
+#: view/admin/global/tabs/day-off.php:30
+msgid "Month"
+msgstr ""
+
+#: view/admin/global/tabs/day-off.php:33
+msgid "Year"
+msgstr ""
+
+#: view/admin/global/tabs/day-off.php:48 view/admin/global/tabs/day-off.php:83
+msgid "Add More"
+msgstr ""
+
+#: view/admin/global/tabs/day-off.php:56
+msgid "Specific Duration Off"
+msgstr ""
+
+#: view/admin/global/tabs/day-off.php:62
+msgid "From:"
+msgstr ""
+
+#: view/admin/global/tabs/day-off.php:67
+msgid "To:"
+msgstr ""
+
+#: view/admin/global/tabs/day-off.php:91
+msgid "Delivery End Time"
+msgstr ""
+
+#: view/admin/global/tabs/day-off.php:119
+msgid "Minute"
+msgstr ""
+
+#: view/admin/global/tabs/day-off.php:144
+#: view/admin/global/tabs/delivery-text.php:215
+#: view/admin/global/tabs/design-setting.php:133
+#: view/admin/global/tabs/display.php:184
+#: view/admin/global/tabs/general.php:244
+#: view/admin/global/tabs/shipping-delivery-time.php:169
+msgid "Save Settings"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:5
+msgid "Enable text settings at product level?"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:23
+msgid "Use alternative delivery text for cart and checkout?"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:40
+msgid "Delivery text "
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:44
+#: view/admin/global/tabs/delivery-text.php:62
+#: view/admin/global/tabs/delivery-text.php:76
+#: view/admin/global/tabs/delivery-text.php:94
+#: view/admin/global/tabs/delivery-text.php:109
+#: view/admin/global/tabs/delivery-text.php:172
+#: view/admin/product/settings.php:41 view/admin/product/settings.php:61
+#: view/admin/product/settings.php:107 view/admin/product/settings.php:126
+#: view/admin/product/settings.php:174
+msgid "For display number of remaining days"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:45
+#: view/admin/global/tabs/delivery-text.php:63
+#: view/admin/global/tabs/delivery-text.php:77
+#: view/admin/global/tabs/delivery-text.php:95
+#: view/admin/global/tabs/delivery-text.php:110
+#: view/admin/global/tabs/delivery-text.php:173
+#: view/admin/product/settings.php:42 view/admin/product/settings.php:62
+#: view/admin/product/settings.php:108 view/admin/product/settings.php:127
+#: view/admin/product/settings.php:175
+msgid "x is number of additional day Example:{d+1},{d+2}.."
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:46
+#: view/admin/global/tabs/delivery-text.php:64
+#: view/admin/global/tabs/delivery-text.php:78
+#: view/admin/global/tabs/delivery-text.php:96
+#: view/admin/global/tabs/delivery-text.php:111
+#: view/admin/global/tabs/delivery-text.php:174
+#: view/admin/product/settings.php:43 view/admin/product/settings.php:63
+#: view/admin/product/settings.php:109 view/admin/product/settings.php:128
+#: view/admin/product/settings.php:176
+msgid "x is number of additional day Example:{d-1},{d-2}.."
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:47
+#: view/admin/global/tabs/delivery-text.php:65
+#: view/admin/global/tabs/delivery-text.php:79
+#: view/admin/global/tabs/delivery-text.php:97
+#: view/admin/global/tabs/delivery-text.php:112
+#: view/admin/global/tabs/delivery-text.php:123
+#: view/admin/global/tabs/delivery-text.php:175
+#: view/admin/product/settings.php:44 view/admin/product/settings.php:64
+#: view/admin/product/settings.php:110 view/admin/product/settings.php:129
+#: view/admin/product/settings.php:177 view/admin/product/settings.php:196
+msgid "For display delivery date"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:48
+#: view/admin/global/tabs/delivery-text.php:66
+#: view/admin/global/tabs/delivery-text.php:80
+#: view/admin/global/tabs/delivery-text.php:98
+#: view/admin/global/tabs/delivery-text.php:113
+#: view/admin/global/tabs/delivery-text.php:124
+#: view/admin/global/tabs/delivery-text.php:176
+#: view/admin/product/settings.php:45 view/admin/product/settings.php:65
+#: view/admin/product/settings.php:111 view/admin/product/settings.php:130
+#: view/admin/product/settings.php:178 view/admin/product/settings.php:197
+msgid "x is number of additional day Example:{date+1},{date+2}.."
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:49
+#: view/admin/global/tabs/delivery-text.php:67
+#: view/admin/global/tabs/delivery-text.php:81
+#: view/admin/global/tabs/delivery-text.php:99
+#: view/admin/global/tabs/delivery-text.php:114
+#: view/admin/global/tabs/delivery-text.php:125
+#: view/admin/global/tabs/delivery-text.php:177
+#: view/admin/product/settings.php:46 view/admin/product/settings.php:66
+#: view/admin/product/settings.php:112 view/admin/product/settings.php:131
+#: view/admin/product/settings.php:179 view/admin/product/settings.php:198
+msgid "x is number of additional day Example:{date-1},{date-2}.."
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:50
+msgid ""
+"Use {time_limit} to show the time limit. For example: Order in 5 hours and "
+"10 minitues and get delivery in 2 days"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:56
+msgid "Alternative delivery text "
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:57
+#: view/admin/global/tabs/delivery-text.php:89
+msgid ""
+"This text will be use if you use time limit in delivery text and it is not "
+"possible to calculate the time limit"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:72
+msgid "Delivery text for backorder product"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:88
+msgid "Alternative delivery text for backorder product "
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:105
+msgid "Delivery text for out of stock product"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:119
+msgid "Delivery text on order page"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:131
+msgid "Combine date text for cart and checkout page?"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:136
+msgid ""
+"For display number of remaining days of product with maximum delivery day"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:137
+msgid ""
+"x is number of additional day Example:{product_with_max_d+1},"
+"{product_with_max_d+2}.."
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:138
+msgid ""
+"x is number of additional day Example:{product_with_max_d-1},"
+"{product_with_max_d-2}.."
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:139
+#: view/admin/global/tabs/delivery-text.php:158
+msgid "For display delivery date of product with maximum delivery date"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:140
+#: view/admin/global/tabs/delivery-text.php:159
+msgid ""
+"x is number of additional day Example:{product_with_max_date+1},"
+"{product_with_max_date+2}.."
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:141
+#: view/admin/global/tabs/delivery-text.php:160
+msgid ""
+"x is number of additional day Example:{product_with_max_date-1},"
+"{product_with_max_date-2}.."
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:142
+msgid ""
+"For display number of remaining days of product with minimum delivery day"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:143
+msgid ""
+"x is number of additional day Example:{product_with_min_d+1},"
+"{product_with_min_d+2}.."
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:144
+msgid ""
+"x is number of additional day Example:{product_with_min_d-1},"
+"{product_with_min_d-2}.."
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:145
+#: view/admin/global/tabs/delivery-text.php:161
+msgid "For display delivery date of product with minimum delivery date"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:146
+#: view/admin/global/tabs/delivery-text.php:162
+msgid ""
+"x is number of additional day Example:{product_with_min_date+1},"
+"{product_with_min_date+2}.."
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:147
+#: view/admin/global/tabs/delivery-text.php:163
+msgid ""
+"x is number of additional day Example:{product_with_min_date-1},"
+"{product_with_min_date-2}.."
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:153
+msgid "Combine date text for order page?"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:168
+msgid "Delivery text for carrier"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:182
+msgid "Text when no variation selected "
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:186
+msgid "For display minimum delivery days for product variations"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:187
+msgid "For display maximum delivery days for product variations"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:188
+msgid "For display minimum delivery date for product variations"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:189
+msgid "For display maximum delivery date for product variations"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:194
+msgid "Date Format"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:198
+msgid "Day of month (2 digits with leading zeros)"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:199
+msgid "A textual representation of a day, three letters"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:200
+msgid "Day of the month without leading zeros"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:201
+msgid "A full textual representation of the day of the week"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:202
+msgid "Numeric representation of a month, with leading zeros"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:203
+msgid "A full textual representation of a month, with leading zeros"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:204
+msgid "A short textual representation of a month, three letters"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:205
+msgid "Numeric representation of a month, without leading zeros"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:206
+msgid "A full numeric representation of a year, 4 digits"
+msgstr ""
+
+#: view/admin/global/tabs/delivery-text.php:207
+msgid "A two digit representation of a year"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:4
+msgid "Delivery text icon"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:6
+#: view/admin/global/tabs/design-setting.php:60
+#: view/admin/global/tabs/design-setting.php:102
+msgid "Upload Icon"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:11
+msgid "Hide icon on shop page?"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:29
+msgid "Hide icon on cart/checkout page?"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:46
+msgid "Delivery text backgorund color"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:52
+msgid "Delivery text color"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:58
+msgid "Carrier delivery text icon"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:64
+msgid "Carrier delivery text backgorund color"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:70
+msgid "Carrier delivery text color"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:76
+msgid "Delivery text backgorund color for out of stock product"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:82
+msgid "Delivery text color for out of stock product"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:88
+msgid "Delivery text backgorund color for backorder product"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:94
+msgid "Delivery text color for backorder product"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:100
+msgid "Delivery text icon for cart and checkout for combine delivery date"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:106
+msgid ""
+"Delivery text backgorund color for cart and checkout for combine delivery "
+"date"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:112
+msgid "Delivery text color for cart and checkout for combine delivery date"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:118
+msgid "Delivery text size"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:120
+msgid " px"
+msgstr ""
+
+#: view/admin/global/tabs/design-setting.php:124
+msgid "Custom Css"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:5
+msgid "Display on product archive/shop pages?"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:23
+msgid "Delivery text position on product archive page"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:27
+msgid "Before product image"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:28
+msgid "Before product title"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:29
+msgid "After product title"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:30
+msgid "Before add to cart"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:36
+msgid "Display on product page?"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:54
+msgid "Delivery text position on product page"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:58
+msgid "Below  Title"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:59
+msgid "After Description"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:60
+msgid "After Price"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:61
+msgid "After Add To Cart"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:62
+msgid "Before Add To Cart"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:68
+msgid "Display on cart and checkout page?"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:86
+msgid "Display on order page?"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:104
+msgid "Display in order email?"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:122
+msgid "Combine delivery message position on cart page?"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:126
+msgid "Before Cart Table"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:127
+msgid "After Cart Coupon"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:128
+msgid "After Cart Content"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:129
+msgid "After Cart Table"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:130
+msgid "Cart Collaterals"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:131
+msgid "Before Cart Total"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:138
+msgid "Combine delivery message position on checkout page?"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:142
+msgid "Before Checkout Form"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:143
+#: view/admin/global/tabs/display.php:175
+msgid "Before Customer Detail"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:144
+msgid "Before Billing Detail"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:145
+msgid "After Billing Detail"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:146
+msgid "Before Shipping Detail"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:147
+msgid "Before Order Notes"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:148
+msgid "After Order Notes"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:149
+msgid "Before Order Review"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:155
+msgid "Combine delivery message position on customer order detail page?"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:159
+msgid "Before Order Detail Table"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:160
+msgid "After Order Detail Table"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:161
+#: view/admin/global/tabs/display.php:173
+msgid "After Order Detail"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:162
+msgid "After Customer Detail"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:168
+msgid "Combine delivery message position on email?"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:172
+msgid "Before Order Detail"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:174
+msgid "Before Order Meta"
+msgstr ""
+
+#: view/admin/global/tabs/display.php:176
+msgid "After Customer Detail  "
+msgstr ""
+
+#: view/admin/global/tabs/general.php:5
+msgid "Enabled delivery date?"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:11
+msgid "Enable"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:16
+msgid "Disable"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:23
+msgid "Enable carrier delivery message on product page?"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:24
+msgid ""
+"Enable this option if you want to show the date when the product is usually "
+"shipped to carrier"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:42
+msgid "Enabled for all products?"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:43
+msgid ""
+"This setting enable delivery time for all products. You can enable this "
+"option if all your products have same delivery time."
+msgstr ""
+
+#: view/admin/global/tabs/general.php:61
+msgid "Delivery time"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:63 view/admin/global/tabs/general.php:69
+#: view/admin/global/tabs/general.php:117
+#: view/admin/global/tabs/general.php:126
+#: view/admin/global/tabs/general.php:153
+#: view/admin/global/tabs/general.php:162
+msgid " in day"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:67
+msgid "Delivery time to carrier"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:75
+msgid "Hide product level setting for delivery time?"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:76
+msgid ""
+"Select 'yes' only if all your product have same delivery time and you don't "
+"want show product level settings"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:95
+msgid "Hide if product is out of stock?"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:113
+msgid "Delivery time for out of stock product"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:114
+msgid ""
+"Leave blank if you want same delivery time for instock/outofstock products"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:122
+msgid "Delivery time to carrier for out of stock product"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:123
+msgid ""
+"Leave blank if you want same delivery time to carrier for instock/outofstock "
+"products"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:131
+msgid "Hide if product is backorder?"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:149
+msgid "Delivery time for backorder product"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:150
+msgid ""
+"Leave blank if you want same delivery time for instock/outofstock/backorder "
+"products"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:158
+msgid "Delivery time to carrier for backorder product"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:159
+msgid ""
+"Leave blank if you want same delivery time to carrier for instock/outofstock/"
+"backorder products"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:167
+msgid "Display on backorder products only?"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:185
+msgid "Load delivery date using ajax on product page?"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:186
+msgid "Select Yes only if you are using any cache plugin."
+msgstr ""
+
+#: view/admin/global/tabs/general.php:204
+msgid "Combine delivery date for order?"
+msgstr ""
+
+#: view/admin/global/tabs/general.php:205
+msgid ""
+"It will remove delivery date for each product from cart,checkout and order "
+"page and display single delivery date for order as per your settings."
+msgstr ""
+
+#: view/admin/global/tabs/general.php:223
+msgid "Enable for REST API?"
+msgstr ""
+
+#: view/admin/global/tabs/shipping-delivery-time.php:5
+msgid ""
+"This delivery time only use in calculation if user selected shipping method "
+"from cart or checkout page."
+msgstr ""
+
+#: view/admin/global/tabs/shipping-delivery-time.php:26
+#: view/admin/global/tabs/shipping-delivery-time.php:79
+msgid "Methods"
+msgstr ""
+
+#: view/admin/global/tabs/shipping-delivery-time.php:31
+#: view/admin/global/tabs/shipping-delivery-time.php:84
+#: view/admin/global/tabs/shipping-delivery-time.php:130
+msgid "Name"
+msgstr ""
+
+#: view/admin/global/tabs/shipping-delivery-time.php:34
+#: view/admin/global/tabs/shipping-delivery-time.php:87
+#: view/admin/global/tabs/shipping-delivery-time.php:133
+msgid "Type"
+msgstr ""
+
+#: view/admin/global/tabs/shipping-delivery-time.php:37
+#: view/admin/global/tabs/shipping-delivery-time.php:90
+#: view/admin/global/tabs/shipping-delivery-time.php:136
+msgid "Additional delivery time"
+msgstr ""
+
+#: view/admin/global/tabs/shipping-delivery-time.php:77
+msgid "Rest of the World"
+msgstr ""
+
+#: view/admin/global/tabs/shipping-delivery-time.php:125
+msgid "Other Methods"
+msgstr ""
+
+#: view/admin/product/settings.php:11 view/admin/product/dokan/product.php:23
+#: view/admin/product/variation/settings.php:7
+msgid "Delivery time :"
+msgstr ""
+
+#: view/admin/product/settings.php:14 view/admin/product/settings.php:26
+#: view/admin/product/settings.php:92 view/admin/product/settings.php:159
+#: view/admin/product/bulkedit/settings.php:5
+#: view/admin/product/bulkedit/settings.php:10
+#: view/admin/product/bulkedit/settings.php:25
+#: view/admin/product/bulkedit/settings.php:30
+#: view/admin/product/bulkedit/settings.php:46
+#: view/admin/product/bulkedit/settings.php:51
+msgid "&nbsp;In Day"
+msgstr ""
+
+#: view/admin/product/settings.php:16 view/admin/product/settings.php:28
+#: view/admin/product/settings.php:50 view/admin/product/settings.php:82
+#: view/admin/product/settings.php:94 view/admin/product/settings.php:115
+#: view/admin/product/settings.php:135 view/admin/product/settings.php:149
+#: view/admin/product/settings.php:161 view/admin/product/settings.php:182
+#: view/admin/product/settings.php:201
+msgid "Leave blank if you want to use global settings."
+msgstr ""
+
+#: view/admin/product/settings.php:23
+msgid "Delivery time to carrier:"
+msgstr ""
+
+#: view/admin/product/settings.php:36
+#: view/admin/product/variation/settings.php:65
+msgid "Delivery date text:"
+msgstr ""
+
+#: view/admin/product/settings.php:47 view/admin/product/settings.php:132
+#: view/admin/product/variation/settings.php:73
+#: view/admin/product/variation/settings.php:103
+msgid ""
+"Use {time_limit} to show the time limit. For example: Order in 5 hours and "
+"10 minitues and get delivery in 2 days.."
+msgstr ""
+
+#: view/admin/product/settings.php:56
+#: view/admin/product/variation/settings.php:80
+msgid "Alternative delivery text:"
+msgstr ""
+
+#: view/admin/product/settings.php:69
+msgid ""
+"This text will be use if you use time limit in delivery text and it is not "
+"possible to calculate the time limit,Leave blank if you want to use global "
+"settings."
+msgstr ""
+
+#: view/admin/product/settings.php:77 view/admin/product/dokan/product.php:32
+#: view/admin/product/variation/settings.php:28
+#: view/admin/product/wcfm/product.php:22
+#: view/admin/product/wcfm/product.php:25
+msgid "Delivery time for backorder:"
+msgstr ""
+
+#: view/admin/product/settings.php:89
+#: view/admin/product/variation/settings.php:36
+msgid "Delivery time to carrier for backorder:"
+msgstr ""
+
+#: view/admin/product/settings.php:102
+#: view/admin/product/variation/settings.php:95
+msgid "Delivery text for backorder:"
+msgstr ""
+
+#: view/admin/product/settings.php:121
+#: view/admin/product/variation/settings.php:110
+msgid "Alternative delivery text for backorder product:"
+msgstr ""
+
+#: view/admin/product/settings.php:144 view/admin/product/dokan/product.php:43
+#: view/admin/product/variation/settings.php:47
+#: view/admin/product/wcfm/product.php:33
+#: view/admin/product/wcfm/product.php:36
+msgid "Delivery time for out of stock:"
+msgstr ""
+
+#: view/admin/product/settings.php:156
+#: view/admin/product/variation/settings.php:55
+msgid "Delivery time to carrier for out of stock:"
+msgstr ""
+
+#: view/admin/product/settings.php:169
+#: view/admin/product/variation/settings.php:126
+msgid "Delivery text for out of stock:"
+msgstr ""
+
+#: view/admin/product/settings.php:191
+#: view/admin/product/variation/settings.php:141
+msgid "Delivery text on order page :"
+msgstr ""
+
+#: view/admin/product/bulkedit/settings.php:4
+#: view/admin/product/quickedit/settings.php:6
+msgid "Delivery time: "
+msgstr ""
+
+#: view/admin/product/bulkedit/settings.php:9
+#: view/admin/product/quickedit/settings.php:12
+msgid "Delivery time to carrier: "
+msgstr ""
+
+#: view/admin/product/bulkedit/settings.php:14
+#: view/admin/product/quickedit/settings.php:19
+msgid "Delivery date text: "
+msgstr ""
+
+#: view/admin/product/bulkedit/settings.php:18
+msgid "Alternative delivery date text: "
+msgstr ""
+
+#: view/admin/product/bulkedit/settings.php:24
+#: view/admin/product/quickedit/settings.php:32
+msgid "Delivery time for backorder: "
+msgstr ""
+
+#: view/admin/product/bulkedit/settings.php:29
+#: view/admin/product/quickedit/settings.php:38
+msgid "Delivery time to carrier for backorder: "
+msgstr ""
+
+#: view/admin/product/bulkedit/settings.php:34
+#: view/admin/product/quickedit/settings.php:45
+msgid "Delivery text for backorder: "
+msgstr ""
+
+#: view/admin/product/bulkedit/settings.php:38
+msgid "Alternative delivery text for backorder: "
+msgstr ""
+
+#: view/admin/product/bulkedit/settings.php:45
+#: view/admin/product/quickedit/settings.php:59
+msgid "Delivery time for out of stock: "
+msgstr ""
+
+#: view/admin/product/bulkedit/settings.php:50
+#: view/admin/product/quickedit/settings.php:65
+msgid "Delivery time to carrier for out of stock: "
+msgstr ""
+
+#: view/admin/product/bulkedit/settings.php:55
+#: view/admin/product/quickedit/settings.php:72
+msgid "Delivery text for out of stock: "
+msgstr ""
+
+#: view/admin/product/bulkedit/settings.php:61
+#: view/admin/product/quickedit/settings.php:81
+msgid "Delivery text on order page: "
+msgstr ""
+
+#: view/admin/product/dokan/product.php:11
+#: view/admin/product/wcfm/product.php:12
+#: view/admin/product/wcfm/product.php:15
+msgid "Delivery Time"
+msgstr ""
+
+#: view/admin/product/dokan/product.php:14
+msgid "Manage your product delivery time"
+msgstr ""
+
+#: view/admin/product/quickedit/settings.php:7
+#: view/admin/product/quickedit/settings.php:13
+#: view/admin/product/quickedit/settings.php:33
+#: view/admin/product/quickedit/settings.php:39
+#: view/admin/product/quickedit/settings.php:60
+#: view/admin/product/quickedit/settings.php:66
+msgid "In Day "
+msgstr ""
+
+#: view/admin/product/quickedit/settings.php:24
+msgid "Alternative delivery text: "
+msgstr ""
+
+#: view/admin/product/quickedit/settings.php:50
+msgid "Alternative delivery text for backorder product: "
+msgstr ""
+
+#: view/admin/product/variation/settings.php:8
+#: view/admin/product/variation/settings.php:19
+#: view/admin/product/variation/settings.php:29
+#: view/admin/product/variation/settings.php:37
+#: view/admin/product/variation/settings.php:48
+#: view/admin/product/variation/settings.php:56
+msgid "In Day"
+msgstr ""
+
+#: view/admin/product/variation/settings.php:18
+msgid "Delivery time to carrier :"
+msgstr ""
+
+#: view/admin/product/variation/settings.php:67
+#: view/admin/product/variation/settings.php:82
+#: view/admin/product/variation/settings.php:97
+#: view/admin/product/variation/settings.php:112
+#: view/admin/product/variation/settings.php:128
+msgid " For display number of remaining days"
+msgstr ""
+
+#: view/admin/product/variation/settings.php:68
+#: view/admin/product/variation/settings.php:83
+#: view/admin/product/variation/settings.php:98
+#: view/admin/product/variation/settings.php:113
+#: view/admin/product/variation/settings.php:129
+msgid " x is number of additional day Example:{d+1},{d+2}.."
+msgstr ""
+
+#: view/admin/product/variation/settings.php:69
+#: view/admin/product/variation/settings.php:84
+#: view/admin/product/variation/settings.php:99
+#: view/admin/product/variation/settings.php:114
+#: view/admin/product/variation/settings.php:130
+msgid " x is number of additional day Example:{d-1},{d-2}.."
+msgstr ""
+
+#: view/admin/product/variation/settings.php:70
+#: view/admin/product/variation/settings.php:85
+#: view/admin/product/variation/settings.php:100
+#: view/admin/product/variation/settings.php:115
+#: view/admin/product/variation/settings.php:131
+#: view/admin/product/variation/settings.php:143
+msgid " For display delivery date"
+msgstr ""
+
+#: view/admin/product/variation/settings.php:71
+#: view/admin/product/variation/settings.php:86
+#: view/admin/product/variation/settings.php:101
+#: view/admin/product/variation/settings.php:116
+#: view/admin/product/variation/settings.php:132
+#: view/admin/product/variation/settings.php:144
+msgid " x is number of additional day Example:{date+1},{date+2}.."
+msgstr ""
+
+#: view/admin/product/variation/settings.php:72
+#: view/admin/product/variation/settings.php:87
+#: view/admin/product/variation/settings.php:102
+#: view/admin/product/variation/settings.php:117
+#: view/admin/product/variation/settings.php:133
+#: view/admin/product/variation/settings.php:145
+msgid " x is number of additional day Example:{date-1},{date-2}.."
+msgstr ""
+
+#: view/admin/product/wcfm/product.php:7
+msgid "Delivery time settings"
+msgstr ""

@@ -4,6 +4,7 @@ declare( strict_types=1 );
 namespace Automattic\WooCommerce\Internal\Traits;
 
 use Automattic\WooCommerce\Vendor\Detection\MobileDetect;
+use Automattic\WooCommerce\Admin\API\Reports\Controller as ReportsController;
 use Exception;
 use WC_Meta_Data;
 use WC_Order;
@@ -18,42 +19,30 @@ use WP_Post;
  */
 trait OrderAttributionMeta {
 
-	/**
-	 * The default fields and their sourcebuster accesors,
-	 * to show in the source data metabox.
-	 *
-	 * @var string[]
-	 * */
+	/** @var string[] */
 	private $default_fields = array(
 		// main fields.
-		'source_type'        => 'current.typ',
-		'referrer'           => 'current_add.rf',
+		'type',
+		'url',
 
 		// utm fields.
-		'utm_campaign'       => 'current.cmp',
-		'utm_source'         => 'current.src',
-		'utm_medium'         => 'current.mdm',
-		'utm_content'        => 'current.cnt',
-		'utm_id'             => 'current.id',
-		'utm_term'           => 'current.trm',
+		'utm_campaign',
+		'utm_source',
+		'utm_medium',
+		'utm_content',
+		'utm_id',
+		'utm_term',
 
 		// additional fields.
-		'session_entry'      => 'current_add.ep',
-		'session_start_time' => 'current_add.fd',
-		'session_pages'      => 'session.pgs',
-		'session_count'      => 'udata.vst',
-		'user_agent'         => 'udata.uag',
+		'session_entry',
+		'session_start_time',
+		'session_pages',
+		'session_count',
+		'user_agent',
 	);
 
 	/** @var array */
 	private $fields = array();
-
-	/**
-	 * Cached `array_keys( $fields )`.
-	 *
-	 * @var array
-	 * */
-	private $field_names = array();
 
 	/** @var string */
 	private $field_prefix = '';
@@ -78,7 +67,7 @@ trait OrderAttributionMeta {
 	}
 
 	/**
-	 * Set the fields and the field prefix.
+	 * Set the meta fields and the field prefix.
 	 *
 	 * @return void
 	 */
@@ -90,8 +79,7 @@ trait OrderAttributionMeta {
 		 *
 		 * @param string[] $fields The fields to show.
 		 */
-		$this->fields      = (array) apply_filters( 'wc_order_attribution_tracking_fields', $this->default_fields );
-		$this->field_names = array_keys( $this->fields );
+		$this->fields = (array) apply_filters( 'wc_order_attribution_tracking_fields', $this->default_fields );
 		$this->set_field_prefix();
 	}
 
@@ -131,11 +119,11 @@ trait OrderAttributionMeta {
 	 */
 	private function filter_meta_data( array $meta ): array {
 		$return = array();
-		$prefix = $this->get_meta_prefixed_field_name( '' );
+		$prefix = $this->get_meta_prefixed_field( '' );
 
 		foreach ( $meta as $item ) {
 			if ( str_starts_with( $item->key, $prefix ) ) {
-				$return[ $this->unprefix_meta_field_name( $item->key ) ] = $item->value;
+				$return[ $this->unprefix_meta_field( $item->key ) ] = $item->value;
 			}
 		}
 
@@ -145,7 +133,7 @@ trait OrderAttributionMeta {
 		}
 
 		// Determine the origin based on source type and referrer.
-		$source_type      = $return['source_type'] ?? '';
+		$source_type      = $return['type'] ?? '';
 		$source           = $return['utm_source'] ?? '';
 		$return['origin'] = $this->get_origin_label( $source_type, $source, true );
 
@@ -155,34 +143,50 @@ trait OrderAttributionMeta {
 	/**
 	 * Get the field name with the appropriate prefix.
 	 *
-	 * @param string $name Field name.
+	 * @param string $field Field name.
 	 *
 	 * @return string The prefixed field name.
 	 */
-	private function get_prefixed_field_name( $name ): string {
-		return "{$this->field_prefix}{$name}";
+	private function get_prefixed_field( $field ): string {
+		return "{$this->field_prefix}{$field}";
 	}
 
 	/**
 	 * Get the field name with the meta prefix.
 	 *
-	 * @param string $name The field name.
+	 * @param string $field The field name.
 	 *
 	 * @return string The prefixed field name.
 	 */
-	private function get_meta_prefixed_field_name( string $name ): string {
-		return "_{$this->get_prefixed_field_name( $name )}";
+	private function get_meta_prefixed_field( string $field ): string {
+		// Map some of the fields to the correct meta name.
+		if ( 'type' === $field ) {
+			$field = 'source_type';
+		} elseif ( 'url' === $field ) {
+			$field = 'referrer';
+		}
+
+		return "_{$this->get_prefixed_field( $field )}";
 	}
 
 	/**
 	 * Remove the meta prefix from the field name.
 	 *
-	 * @param string $name The prefixed fieldname .
+	 * @param string $field The prefixed field.
 	 *
 	 * @return string
 	 */
-	private function unprefix_meta_field_name( string $name ): string {
-		return str_replace( "_{$this->field_prefix}", '', $name );
+	private function unprefix_meta_field( string $field ): string {
+		$return = str_replace( "_{$this->field_prefix}", '', $field );
+
+		// Map some of the fields to the correct meta name.
+		if ( 'source_type' === $return ) {
+			$return = 'type';
+		} elseif ( 'referrer' === $return ) {
+			$return = 'url';
+		}
+
+		return $return;
 	}
 
 	/**
@@ -214,19 +218,19 @@ trait OrderAttributionMeta {
 
 
 	/**
-	 * Map posted, prefixed values to field values.
+	 * Map posted, prefixed values to fields.
 	 * Used for the classic forms.
 	 *
 	 * @param array $raw_values The raw values from the POST form.
 	 *
 	 * @return array
 	 */
-	private function get_unprefixed_field_values( array $raw_values = array() ): array {
+	private function get_unprefixed_fields( array $raw_values = array() ): array {
 		$values = array();
 
 		// Look through each field in POST data.
-		foreach ( $this->field_names as $field_name ) {
-			$values[ $field_name ] = $raw_values[ $this->get_prefixed_field_name( $field_name ) ] ?? '(none)';
+		foreach ( $this->fields as $field ) {
+			$values[ $field ] = $raw_values[ $this->get_prefixed_field( $field ) ] ?? '(none)';
 		}
 
 		return $values;
@@ -243,13 +247,13 @@ trait OrderAttributionMeta {
 		$values = array();
 
 		// Look through each field in given data.
-		foreach ( $this->field_names as $field_name ) {
-			$value = sanitize_text_field( wp_unslash( $raw_values[ $field_name ] ) );
+		foreach ( $this->fields as $field ) {
+			$value = sanitize_text_field( wp_unslash( $raw_values[ $field ] ) );
 			if ( '(none)' === $value ) {
 				continue;
 			}
 
-			$values[ $field_name ] = $value;
+			$values[ $field ] = $value;
 		}
 
 		// Set the device type if possible using the user agent.
@@ -306,9 +310,7 @@ trait OrderAttributionMeta {
 
 			default:
 				$label  = '';
-				$source = $translated ?
-					__( 'Unknown', 'woocommerce' )
-					: 'Unknown';
+				$source = __( 'Unknown', 'woocommerce' );
 				break;
 		}
 
@@ -357,13 +359,13 @@ trait OrderAttributionMeta {
 	/**
 	 * Get the description for the order attribution field.
 	 *
-	 * @param string $field_name The field name.
+	 * @param string $field The field name.
 	 *
 	 * @return string
 	 */
-	private function get_field_description( string $field_name ): string {
+	private function get_field_description( string $field ): string {
 		/* translators: %s is the field name */
-		$description = sprintf( __( 'Order attribution field: %s', 'woocommerce' ), $field_name );
+		$description = sprintf( __( 'Order attribution field: %s', 'woocommerce' ), $field );
 
 		/**
 		 * Filter the description for the order attribution field.
@@ -371,8 +373,56 @@ trait OrderAttributionMeta {
 		 * @since 8.5.0
 		 *
 		 * @param string $description The description for the order attribution field.
-		 * @param string $field_name  The field name.
+		 * @param string $field       The field name.
 		 */
-		return (string) apply_filters( 'wc_order_attribution_field_description', $description, $field_name );
+		return (string) apply_filters( 'wc_order_attribution_field_description', $description, $field );
+	}
+
+	/**
+	 * Get the order history for the customer (data matches Customers report).
+	 *
+	 * @param mixed $customer_identifier The customer ID or billing email.
+	 *
+	 * @return array Order count, total spend, and average spend per order.
+	 */
+	private function get_customer_history( $customer_identifier ): array {
+		/*
+		 * Exclude the statuses that aren't valid for the Customers report.
+		 * 'checkout-draft' is the checkout block's draft order status. `any` is added by V2 Orders REST.
+		 * @see /Automattic/WooCommerce/Admin/API/Report/DataStore::get_excluded_report_order_statuses()
+		 */
+		$all_order_statuses = ReportsController::get_order_statuses();
+		$excluded_statuses  = array( 'pending', 'failed', 'cancelled', 'auto-draft', 'trash', 'checkout-draft', 'any' );
+
+		// Get the valid customer orders.
+		$args = array(
+			'limit'  => - 1,
+			'return' => 'objects',
+			'status' => array_diff( $all_order_statuses, $excluded_statuses ),
+			'type'   => 'shop_order',
+		);
+
+		// If the customer_identifier is a valid ID, use it. Otherwise, use the billing email.
+		if ( is_numeric( $customer_identifier ) && $customer_identifier > 0 ) {
+			$args['customer_id'] = $customer_identifier;
+		} else {
+			$args['billing_email'] = $customer_identifier;
+			$args['customer_id']   = 0;
+		}
+
+		$orders = wc_get_orders( $args );
+
+		// Populate the order_count and total_spent variables with the valid orders.
+		$order_count = count( $orders );
+		$total_spent = 0;
+		foreach ( $orders as $order ) {
+			$total_spent += $order->get_total() - $order->get_total_refunded();
+		}
+
+		return array(
+			'order_count'   => $order_count,
+			'total_spent'   => $total_spent,
+			'average_spent' => $order_count ? $total_spent / $order_count : 0,
+		);
 	}
 }

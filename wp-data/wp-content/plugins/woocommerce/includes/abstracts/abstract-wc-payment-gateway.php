@@ -247,6 +247,9 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 			$return_url = sprintf( $this->view_transaction_url, $transaction_id );
 		}
 
+		error_log( 'get_transaction_url' );
+		error_log( $return_url );
+
 		return apply_filters( 'woocommerce_get_transaction_url', $return_url, $order, $this );
 	}
 

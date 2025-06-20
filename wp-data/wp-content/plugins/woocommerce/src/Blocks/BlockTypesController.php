@@ -240,11 +240,6 @@ final class BlockTypesController {
 			'ProductCategory',
 			'ProductCollection',
 			'ProductCollectionNoResults',
-			'ProductGallery',
-			'ProductGalleryLargeImage',
-			'ProductGalleryLargeImageNextPrevious',
-			'ProductGalleryPager',
-			'ProductGalleryThumbnails',
 			'ProductImage',
 			'ProductImageGallery',
 			'ProductNew',
@@ -286,8 +281,6 @@ final class BlockTypesController {
 			'OrderConfirmation\BillingWrapper',
 			'OrderConfirmation\ShippingWrapper',
 			'OrderConfirmation\AdditionalInformation',
-			'OrderConfirmation\AdditionalFieldsWrapper',
-			'OrderConfirmation\AdditionalFields',
 		);
 
 		$block_types = array_merge(
@@ -298,12 +291,17 @@ final class BlockTypesController {
 		);
 
 		if ( Package::feature()->is_experimental_build() ) {
-			$block_types[] = 'ProductFilter';
-			$block_types[] = 'ProductFilterStockStatus';
-			$block_types[] = 'ProductFilterPrice';
-			$block_types[] = 'ProductFilterAttribute';
-			$block_types[] = 'ProductFilterRating';
-			$block_types[] = 'ProductFilterActive';
+			$block_types[] = 'ProductGallery';
+			$block_types[] = 'ProductGalleryLargeImage';
+			$block_types[] = 'ProductGalleryLargeImageNextPrevious';
+			$block_types[] = 'ProductGalleryPager';
+			$block_types[] = 'ProductGalleryThumbnails';
+			$block_types[] = 'CollectionFilters';
+			$block_types[] = 'CollectionStockFilter';
+			$block_types[] = 'CollectionPriceFilter';
+			$block_types[] = 'CollectionAttributeFilter';
+			$block_types[] = 'CollectionRatingFilter';
+			$block_types[] = 'CollectionActiveFilters';
 		}
 
 		/**
@@ -344,8 +342,6 @@ final class BlockTypesController {
 					'OrderConfirmation\BillingWrapper',
 					'OrderConfirmation\ShippingWrapper',
 					'OrderConfirmation\AdditionalInformation',
-					'OrderConfirmation\AdditionalFieldsWrapper',
-					'OrderConfirmation\AdditionalFields',
 				)
 			);
 		}

@@ -12,7 +12,7 @@
  *
  * @see     https://woo.com/document/template-structure/
  * @package WooCommerce\Templates\Emails
- * @version 8.6.0
+ * @version 7.4.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -163,17 +163,6 @@ body {
 	padding: 12px;
 	color: <?php echo esc_attr( $text_lighter_20 ); ?>;
 	border: 1px solid <?php echo esc_attr( $body_darker_10 ); ?>;
-}
-
-.additional-fields {
-	padding: 12px 12px 0;
-	color: <?php echo esc_attr( $text_lighter_20 ); ?>;
-	border: 1px solid <?php echo esc_attr( $body_darker_10 ); ?>;
-	list-style: none outside;
-}
-
-.additional-fields li {
-	margin: 0 0 12px 0;
 }
 
 .text {

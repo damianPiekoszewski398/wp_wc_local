@@ -1,0 +1,18 @@
+<wpml-config>
+    <custom-fields>
+	<custom-field action="translate">rpesp-meta-setting</custom-field>
+    </custom-fields>
+    <admin-texts>
+	<key name="rpesp-setting">
+	    <key name="estimate_text" />
+	    <key name="alt_estimate_text" />
+	    <key name="estimate_text_backorder" />
+	    <key name="alt_estimate_text_backorder" />
+	    <key name="estimate_text_outofstock" />
+	    <key name="text_order" />
+	    <key name="text_cart_checkout_combine_date" />
+	    <key name="text_order_combine_date" />
+	    <key name="delivery_text_carier" />
+	</key>
+    </admin-texts>
+</wpml-config>

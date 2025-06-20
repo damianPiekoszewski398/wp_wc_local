@@ -4,6 +4,7 @@
  * Slug: woocommerce-blocks/featured-products-2-cols
  * Categories: WooCommerce
  */
+use Automattic\WooCommerce\Blocks\Patterns\PatternsHelper;
 
 $first_title       = $content['titles'][0]['default'] ?? '';
 $first_description = $content['descriptions'][0]['default'] ?? '';

@@ -23,13 +23,9 @@
 
 			<!-- wp:woocommerce/product-price {"isDescendentOfSingleProductBlock":true} /-->
 
-			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
-			<div class="wp-block-group">
-				<!-- wp:woocommerce/product-button -->
-				<div class="wp-block-woocommerce-product-button is-loading"></div>
-				<!-- /wp:woocommerce/product-button -->
-			</div>
-			<!-- /wp:group -->
+			<!-- wp:woocommerce/product-button -->
+			<div class="wp-block-woocommerce-product-button is-loading"></div>
+			<!-- /wp:woocommerce/product-button -->
 
 			<!-- wp:post-excerpt {"__woocommerceNamespace":"woocommerce/product-query/product-summary"} /-->
 		</div>

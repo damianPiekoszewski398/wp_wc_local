@@ -72,6 +72,50 @@ class OrderAttributionBlocksController implements RegisterHooksInterface {
 		}
 
 		$this->extend_api();
+
+		// Bail early on admin requests to avoid asset registration.
+		if ( is_admin() ) {
+			return;
+		}
+
+		add_action(
+			'init',
+			function() {
+				$this->register_assets();
+			}
+		);
+
+		add_action(
+			'wp_enqueue_scripts',
+			function() {
+				$this->enqueue_scripts();
+			}
+		);
+	}
+
+	/**
+	 * Register scripts.
+	 */
+	private function register_assets() {
+		wp_register_script(
+			'wc-order-attribution-blocks',
+			plugins_url(
+				"assets/js/frontend/order-attribution-blocks{$this->get_script_suffix()}.js",
+				WC_PLUGIN_FILE
+			),
+			array( 'wc-order-attribution', 'wp-data', 'wc-blocks-checkout' ),
+			Constants::get_constant( 'WC_VERSION' ),
+			true
+		);
+	}
+
+	/**
+	 * Enqueue the Order Attribution script.
+	 *
+	 * @return void
+	 */
+	private function enqueue_scripts() {
+		wp_enqueue_script( 'wc-order-attribution-blocks' );
 	}
 
 	/**
@@ -120,8 +164,8 @@ class OrderAttributionBlocksController implements RegisterHooksInterface {
 	 */
 	private function get_schema_callback() {
 		return function() {
-			$schema      = array();
-			$field_names = $this->order_attribution_controller->get_field_names();
+			$schema = array();
+			$fields = $this->order_attribution_controller->get_fields();
 
 			$validate_callback = function( $value ) {
 				if ( ! is_string( $value ) && null !== $value ) {
@@ -142,12 +186,12 @@ class OrderAttributionBlocksController implements RegisterHooksInterface {
 				return sanitize_text_field( $value );
 			};
 
-			foreach ( $field_names as $field_name ) {
-				$schema[ $field_name ] = array(
+			foreach ( $fields as $field ) {
+				$schema[ $field ] = array(
 					'description' => sprintf(
 						/* translators: %s is the field name */
 						__( 'Order attribution field: %s', 'woocommerce' ),
-						esc_html( $field_name )
+						esc_html( $field )
 					),
 					'type'        => array( 'string', 'null' ),
 					'context'     => array(),

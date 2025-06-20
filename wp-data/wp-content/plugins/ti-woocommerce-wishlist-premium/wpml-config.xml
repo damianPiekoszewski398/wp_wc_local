@@ -1,0 +1,73 @@
+<wpml-config>
+	<admin-texts>
+		<key name="tinvwl-general">
+			<key name="default_title"/>
+			<key name="text_login_anchor"/>
+			<key name="text_login_link"/>
+			<key name="text_browse"/>
+			<key name="text_already_in"/>
+			<key name="text_removed_from"/>
+			<key name="text_added_to"/>
+		</key>
+		<key name="tinvwl-add_to_wishlist">
+			<key name="text"/>
+			<key name="text_remove"/>
+			<key name="text_already_on"/>
+		</key>
+		<key name="tinvwl-add_to_wishlist_catalog">
+			<key name="text"/>
+			<key name="text_remove"/>
+			<key name="text_already_on"/>
+		</key>
+		<key name="tinvwl-add_to_wishlist_cart">
+			<key name="item_text"/>
+			<key name="text"/>
+		</key>
+		<key name="tinvwl-topline">
+			<key name="text"/>
+		</key>
+		<key name="tinvwl-estimate_button">
+			<key name="text_notes"/>
+		</key>
+		<key name="tinvwl-notifications_style">
+			<key name="logo_current"/>
+			<key name="logo_text"/>
+			<key name="footer_text"/>
+		</key>
+		<key name="tinvwl-notification_template">
+			<key name="logo_current"/>
+		</key>
+		<key name="tinvwl-social">
+			<key name="share_on"/>
+		</key>
+		<key name="tinvwl-product_table">
+			<key name="text_add_to_cart"/>
+		</key>
+		<key name="tinvwl-table">
+			<key name="text_add_select_to_cart"/>
+			<key name="text_add_all_to_cart"/>
+		</key>
+		<key name="woocommerce_tinvwl_estimate_email_settings">
+			<key name="subject"/>
+			<key name="heading"/>
+		</key>
+		<key name="woocommerce_tinvwl_promotional_email_settings">
+			<key name="subject"/>
+			<key name="heading"/>
+			<key name="content"/>
+			<key name="content_plain"/>
+		</key>
+		<key name="woocommerce_tinvwl_notification_price_email_settings">
+			<key name="subject"/>
+			<key name="heading"/>
+		</key>
+		<key name="woocommerce_tinvwl_notification_stock_email_settings">
+			<key name="subject"/>
+			<key name="heading"/>
+		</key>
+		<key name="woocommerce_tinvwl_subscribe_email_settings">
+			<key name="subject"/>
+			<key name="heading"/>
+		</key>
+	</admin-texts>
+</wpml-config>

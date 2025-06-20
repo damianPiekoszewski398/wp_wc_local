@@ -33,13 +33,11 @@ class OrderAttributionServiceProvider extends AbstractInterfaceServiceProvider {
 	 * Register the classes.
 	 */
 	public function register() {
-		$this->share_with_implements_tags( WPConsentAPI::class );
 		$this->share_with_implements_tags( OrderAttributionController::class )
 			->addArguments(
 				array(
 					LegacyProxy::class,
 					FeaturesController::class,
-					WPConsentAPI::class,
 				)
 			);
 		$this->share_with_implements_tags( OrderAttributionBlocksController::class )
@@ -50,5 +48,6 @@ class OrderAttributionServiceProvider extends AbstractInterfaceServiceProvider {
 					OrderAttributionController::class,
 				)
 			);
+		$this->share_with_implements_tags( WPConsentAPI::class );
 	}
 }

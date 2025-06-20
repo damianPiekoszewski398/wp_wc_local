@@ -1206,7 +1206,7 @@ class WC_Cart extends WC_Legacy_Cart {
 				$stock_quantity = $product_data->get_stock_quantity();
 
 				/* translators: 1: product name 2: quantity in stock */
-				$message = sprintf( __( 'You cannot add that amount of &quot;%1$s&quot; to the cart because there is not enough stock (%2$s remaining).', 'woocommerce' ), $product_data->get_name(), wc_format_stock_quantity_for_display( $stock_quantity, $product_data ) );
+				$message = sprintf( __( '!@@You cannot add that amount of &quot;%1$s&quot; to the cart because there is not enough stock (%2$s remaining).', 'woocommerce' ), $product_data->get_name(), wc_format_stock_quantity_for_display( $stock_quantity, $product_data ) );
 
 				/**
 				 * Filters message about product not having enough stock.

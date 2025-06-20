@@ -102,10 +102,7 @@ class Images extends AbstractRoute {
 		$images = ( new Pexels() )->get_images( $ai_connection, $token, $business_description );
 
 		if ( is_wp_error( $images ) ) {
-			$images = array(
-				'images'      => array(),
-				'search_term' => '',
-			);
+			return $this->error_to_response( $images );
 		}
 
 		return rest_ensure_response(

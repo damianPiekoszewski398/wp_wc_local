@@ -220,6 +220,7 @@ class WC_Shipping {
 		if ( is_null( $this->shipping_methods ) ) {
 			$this->load_shipping_methods();
 		}
+
 		return $this->shipping_methods;
 	}
 
@@ -309,7 +310,6 @@ class WC_Shipping {
 		if ( ! $this->enabled || empty( $package ) ) {
 			return false;
 		}
-
 		$package['rates'] = array();
 
 		// If the package is not shippable, e.g. trying to ship to an invalid country, do not calculate rates.
@@ -334,7 +334,7 @@ class WC_Shipping {
 
 		if ( ! is_array( $stored_rates ) || $package_hash !== $stored_rates['package_hash'] || 'yes' === get_option( 'woocommerce_shipping_debug_mode', 'no' ) ) {
 			foreach ( $this->load_shipping_methods( $package ) as $shipping_method ) {
-				if ( ! $shipping_method->supports( 'shipping-zones' ) || $shipping_method->get_instance_id() ) {
+                if ( ! $shipping_method->supports( 'shipping-zones' ) || $shipping_method->get_instance_id() ) {
 					/**
 					 * Fires before getting shipping rates for a package.
 					 *
@@ -358,6 +358,7 @@ class WC_Shipping {
 				}
 			}
 
+
 			/**
 			 * Filter the calculated shipping rates.
 			 *
@@ -375,6 +376,7 @@ class WC_Shipping {
 					'rates'        => $package['rates'],
 				)
 			);
+
 		} else {
 			$package['rates'] = $stored_rates['rates'];
 		}

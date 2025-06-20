@@ -67,8 +67,8 @@ final class AssetsController {
 		// Register the interactivity components here for now.
 		$this->api->register_script( 'wc-interactivity-dropdown', 'assets/client/blocks/wc-interactivity-dropdown.js', array() );
 		$this->api->register_script( 'wc-interactivity-checkbox-list', 'assets/client/blocks/wc-interactivity-checkbox-list.js', array() );
-		$this->register_style( 'wc-interactivity-checkbox-list', plugins_url( $this->api->get_block_asset_build_path( 'wc-interactivity-checkbox-list', 'css' ), dirname( __DIR__ ) ), array(), 'all', true );
-		$this->register_style( 'wc-interactivity-dropdown', plugins_url( $this->api->get_block_asset_build_path( 'wc-interactivity-dropdown', 'css' ), dirname( __DIR__ ) ), array(), 'all', true );
+		$this->register_style( 'wc-interactivity-checkbox-list', plugins_url( $this->api->get_block_asset_build_path( 'wc-interactivity-checkbox-list', 'css' ), __DIR__ ), array(), 'all', true );
+		$this->register_style( 'wc-interactivity-dropdown', plugins_url( $this->api->get_block_asset_build_path( 'wc-interactivity-dropdown', 'css' ), __DIR__ ), array(), 'all', true );
 
 		wp_add_inline_script(
 			'wc-blocks-middleware',
@@ -279,7 +279,7 @@ final class AssetsController {
 		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG && file_exists( \Automattic\WooCommerce\Blocks\Package::get_path() . $file ) ) {
 			return filemtime( \Automattic\WooCommerce\Blocks\Package::get_path() . $file );
 		}
-		return $this->api->wc_version;
+		return \Automattic\WooCommerce\Blocks\Package::get_version();
 	}
 
 	/**

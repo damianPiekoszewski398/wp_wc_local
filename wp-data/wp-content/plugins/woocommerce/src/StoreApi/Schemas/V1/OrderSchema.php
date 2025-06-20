@@ -319,15 +319,54 @@ class OrderSchema extends AbstractSchema {
 			'items'                => $this->get_item_responses_from_schema( $this->item_schema, $order->get_items() ),
 			'coupons'              => $this->get_item_responses_from_schema( $this->coupon_schema, $order->get_items( 'coupon' ) ),
 			'fees'                 => $this->get_item_responses_from_schema( $this->fee_schema, $order->get_items( 'fee' ) ),
-			'totals'               => (object) $this->prepare_currency_response( $this->get_totals( $order ) ),
+			'totals'               => (object) gp_multi_currency_response( $this->get_totals( $order ), $order ),
 			'shipping_address'     => (object) $this->shipping_address_schema->get_item_response( $order ),
 			'billing_address'      => (object) $this->billing_address_schema->get_item_response( $order ),
 			'needs_payment'        => $order->needs_payment(),
 			'needs_shipping'       => $order->needs_shipping_address(),
+            'date_paid'            => $order->get_date_paid(),
+            'date_created'         => $order->get_date_created(),
+            'payment_method'       => $order->get_payment_method(),
 			'payment_requirements' => $this->extend->get_payment_requirements(),
+            'payment_details'      => $this->get_payment_details( $order ),
+            'est_delivery_date'    => $this->get_estimated_delivery_date( $order ),
+            'parcel_locker'        => $this->get_parcel_locker_details( $order ),
 			'errors'               => $errors,
 		];
 	}
+
+	protected function get_estimated_delivery_date( \WC_Order $order ) {
+        if ( function_exists('WOO_RPESP') ) {
+            $combineDate = WOO_RPESP()->objFront->getCombineDateForOrder($order);
+
+            if ($combineDate !== false) {
+                return [
+                    'min_timestamp' => $combineDate['min'],
+                    'max_timestamp' => $combineDate['max'],
+                    'min' => WOO_RPESP()->objFront->getFormatedDate( $combineDate['min'] ),
+                    'max' => WOO_RPESP()->objFront->getFormatedDate( $combineDate['max'] ),
+                ];
+            }
+        }
+
+	    return [];
+    }
+
+    protected function get_parcel_locker_details( \WC_Order $order ) {
+        return [
+            'parcelLockerId' => $order->get_meta( '_parcel_locker_id' ),
+            'parcelLockerName' => $order->get_meta( '_parcel_locker_name' ),
+        ];
+    }
+
+	protected function get_payment_details( \WC_Order $order ) {
+	    if( 'bacs' !== $order->get_payment_method() )
+        {
+            return [];
+        }
+
+	    return $order->get_meta('_payment_details_bacs');
+    }
 
 	/**
 	 * Get total data.

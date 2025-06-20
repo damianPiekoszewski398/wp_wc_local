@@ -705,13 +705,15 @@
 
           } else {
             var prop = slider.prop;
-
             slider.container.each(function() {
               var container = this;
-              var currentStyle = {};
-              currentStyle[prop] = container.style[prop];
+              var keyframes = {};
+              keyframes[prop] = [
+                window.getComputedStyle(container)[prop],
+                slider.args[prop]
+              ];
 
-              container.animate([currentStyle, slider.args], { duration: slider.vars.animationSpeed, easing: easing }).onfinish = function() {
+              container.animate(keyframes, { duration: slider.vars.animationSpeed, easing: easing }).onfinish = function() {
                 container.style[prop] = slider.args[prop];
                 slider.wrapup(dimension);
               };
@@ -1132,8 +1134,7 @@
             $slides = $this.find(selector);
 
       if ( ( $slides.length === 1 && options.allowOneSlide === false ) || $slides.length === 0 ) {
-          var fadeIn = [{ opacity: 0 }, { opacity: 1 }];
-          if ($slides.length) { $slides[0].animate(fadeIn, 400); }
+          $slides.fadeIn(400);
           if (options.start) { options.start($this); }
         } else if ($this.data('flexslider') === undefined) {
           new $.flexslider(this, options);

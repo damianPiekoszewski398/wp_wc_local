@@ -78,6 +78,14 @@ if ( ! class_exists( 'WC_Email_Customer_Processing_Order', false ) ) :
 		public function trigger( $order_id, $order = false ) {
 			$this->setup_locale();
 
+//            global $locale;
+//
+//            $language = 'pl_PL';
+//            $locale = $language;
+//            setlocale( LC_ALL, $language );
+//            switch_to_locale( $language );
+//            WC()->load_plugin_textdomain();
+
 			if ( $order_id && ! is_a( $order, 'WC_Order' ) ) {
 				$order = wc_get_order( $order_id );
 			}

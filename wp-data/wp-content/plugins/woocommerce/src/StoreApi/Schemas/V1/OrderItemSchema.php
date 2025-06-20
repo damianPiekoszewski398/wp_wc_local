@@ -56,7 +56,7 @@ class OrderItemSchema extends ItemSchema {
 			'variation'            => $this->format_variation_data( $product->get_attributes(), $product ),
 			'item_data'            => $order_item->get_all_formatted_meta_data(),
 			'prices'               => (object) $this->prepare_product_price_response( $product, get_option( 'woocommerce_tax_display_cart' ) ),
-			'totals'               => (object) $this->prepare_currency_response( $this->get_totals( $order_item ) ),
+			'totals'               => (object) gp_multi_currency_response( $this->get_totals( $order_item ), $order ),
 			'catalog_visibility'   => $product->get_catalog_visibility(),
 		];
 	}

@@ -817,24 +817,23 @@ class CartController {
 
 		$packages = $cart->get_shipping_packages();
 
-		// Return early if invalid object supplied by the filter or no packages.
-		if ( ! is_array( $packages ) || empty( $packages ) ) {
-			return [];
+		// Add extra package data to array.
+		if ( count( $packages ) ) {
+			$packages = array_map(
+				function( $key, $package, $index ) {
+					$package['package_id']   = isset( $package['package_id'] ) ? $package['package_id'] : $key;
+					$package['package_name'] = isset( $package['package_name'] ) ? $package['package_name'] : $this->get_package_name( $package, $index );
+					return $package;
+				},
+				array_keys( $packages ),
+				$packages,
+				range( 1, count( $packages ) )
+			);
 		}
 
-		// Add extra package data to array.
-		$packages = array_map(
-			function( $key, $package, $index ) {
-				$package['package_id']   = isset( $package['package_id'] ) ? $package['package_id'] : $key;
-				$package['package_name'] = isset( $package['package_name'] ) ? $package['package_name'] : $this->get_package_name( $package, $index );
-				return $package;
-			},
-			array_keys( $packages ),
-			$packages,
-			range( 1, count( $packages ) )
-		);
+		$packages = $calculate_rates ? wc()->shipping()->calculate_shipping( $packages ) : $packages;
 
-		return $calculate_rates ? wc()->shipping()->calculate_shipping( $packages ) : $packages;
+		return $packages;
 	}
 
 	/**

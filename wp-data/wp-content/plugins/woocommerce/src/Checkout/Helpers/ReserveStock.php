@@ -35,7 +35,8 @@ final class ReserveStock {
 	 * @return boolean
 	 */
 	protected function is_enabled() {
-		return $this->enabled;
+	    return false;
+//		return $this->enabled;
 	}
 
 	/**

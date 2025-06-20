@@ -17,9 +17,6 @@
 		},
 		"help": {
 			"type": "string"
-		},
-		"tooltip": {
-			"type": "string"
 		}
 	},
 	"supports": {

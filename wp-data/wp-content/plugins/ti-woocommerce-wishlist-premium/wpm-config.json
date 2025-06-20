@@ -1,0 +1,50 @@
+{
+  "admin_pages": [
+	"toplevel_page_tinvwl",
+	"ti-wishlist_page_tinvwl-general-settings",
+	"ti-wishlist_page_tinvwl-button-settings",
+	"ti-wishlist_page_tinvwl-table-settings",
+	"ti-wishlist_page_tinvwl-social-settings"
+  ],
+  "options": {
+	"tinvwl-general": {
+	  "default_title": {},
+	  "text_login_anchor": {},
+	  "text_login_link": {},
+	  "text_browse": {},
+	  "text_added_to": {},
+	  "text_already_in": {},
+	  "text_removed_from": {}
+	},
+	"tinvwl-add_to_wishlist": {
+	  "text": {},
+	  "text_remove": {},
+	  "text_already_on": {}
+	},
+	"tinvwl-add_to_wishlist_catalog": {
+	  "text": {},
+	  "text_remove": {},
+	  "text_already_on": {}
+	},
+	"tinvwl-add_to_wishlist_cart": {
+	  "item_text": {},
+	  "text": {}
+	},
+	"tinvwl-product_table": {
+	  "text_add_to_cart": {}
+	},
+	"tinvwl-table": {
+	  "text_add_select_to_cart": {},
+	  "text_add_all_to_cart": {}
+	},
+	"tinvwl-social": {
+	  "share_on": {}
+	},
+	"tinvwl-topline": {
+	  "text": {}
+	},
+	"tinvwl-estimate_button": {
+	  "text_notes": {}
+	}
+  }
+}

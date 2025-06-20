@@ -365,9 +365,27 @@ class CartSchema extends AbstractSchema {
 			'cross_sells'             => $this->get_item_responses_from_schema( $this->cross_sells_item_schema, $cross_sells ),
 			'errors'                  => $cart_errors,
 			'payment_methods'         => array_values( wp_list_pluck( WC()->payment_gateways->get_available_payment_gateways(), 'id' ) ),
+            'est_delivery_date'       => $this->get_estimated_delivery_date(),
 			self::EXTENDING_KEY       => $this->get_extended_data( self::IDENTIFIER ),
 		];
 	}
+
+    protected function get_estimated_delivery_date() {
+        if ( function_exists('WOO_RPESP') ) {
+            $combineDate = WOO_RPESP()->objFront->getCombineDate();
+
+            if ($combineDate !== false) {
+                return [
+                    'min_timestamp' => $combineDate['min'],
+                    'max_timestamp' => $combineDate['max'],
+                    'min' => WOO_RPESP()->objFront->getFormatedDate( $combineDate['min'] ),
+                    'max' => WOO_RPESP()->objFront->getFormatedDate( $combineDate['max'] ),
+                ];
+            }
+        }
+
+        return [];
+    }
 
 	/**
 	 * Get total data.

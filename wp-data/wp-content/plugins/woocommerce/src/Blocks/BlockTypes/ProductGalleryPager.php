@@ -115,13 +115,11 @@ class ProductGalleryPager extends AbstractBlock {
 
 			$is_first_pager_item = 0 === $key;
 			$pager_item          = sprintf(
-				'<li class="wc-block-product-gallery-pager__pager-item %2$s"><button aria-pressed="%3$s" data-wc-bind--aria-pressed="state.pagerButtonPressed">%1$s</button></li>',
+				'<li class="wc-block-product-gallery-pager__pager-item %2$s">%1$s</li>',
 				'dots' === $pager_display_mode ? $this->get_dot_icon( $is_first_pager_item ) : $key + 1,
-				$is_first_pager_item ? 'wc-block-product-gallery-pager__pager-item--is-active' : '',
-				$is_first_pager_item ? 'true' : 'false'
+				$is_first_pager_item ? 'wc-block-product-gallery-pager__pager-item--is-active' : ''
 			);
-
-			$p = new \WP_HTML_Tag_Processor( $pager_item );
+			$p                   = new \WP_HTML_Tag_Processor( $pager_item );
 
 			if ( $p->next_tag() ) {
 				$p->set_attribute(
@@ -160,7 +158,7 @@ class ProductGalleryPager extends AbstractBlock {
 		$initial_opacity = $is_active ? '1' : '0.2';
 		return sprintf(
 			'<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<circle cx="6" cy="6" r="6" fill="black" fill-opacity="%1$s" data-wc-bind--fill-opacity="state.pagerDotFillOpacity" />
+				<circle cx="6" cy="6" r="6" fill="black" fill-opacity="%1$s" data-wc-bind--fill-opacity="state.pagerDotFillOpacity"  />
 			</svg>',
 			$initial_opacity
 		);
