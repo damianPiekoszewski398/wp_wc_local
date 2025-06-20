@@ -1,9 +1,6 @@
-# 🧱 Instrukcja uruchomienia środowiska WordPress + WooCommerce lokalnie
-
-
+# Instrukcja uruchomienia środowiska WordPress + WooCommerce lokalnie
 
 ##  1. Uruchomienie środowiska
-
 
 ```bash
 make up
