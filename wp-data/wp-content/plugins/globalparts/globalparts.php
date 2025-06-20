@@ -2927,6 +2927,7 @@ function woocommerce_coupon_is_valid_for_market( $valid, $coupon, $discount ) {
     $market = global_get_market();
 
     $coupon_code = strtolower( $coupon->get_code() );
+    $coupon_id = $coupon->get_id();
 
     if( $coupon_code == 'rabat5' && $market != 'pl' ) {
         return false;
@@ -2934,6 +2935,17 @@ function woocommerce_coupon_is_valid_for_market( $valid, $coupon, $discount ) {
 
     if( $coupon_code == 'gp5' && $market != 'uk' ) {
         return false;
+    }
+
+    /**
+     * GL-149 Coupon wyłącznie dla marketów - które go obsługują
+     */
+    $allowed_markets = get_post_meta( $coupon_id, 'markets', true );
+    if ( !empty( $allowed_markets ) ) {
+        $markets_array = array_map( 'trim', explode( ',', $allowed_markets ) );
+        if ( ! in_array( $market, $markets_array ) ) {
+            return false;
+        }
     }
 
     return $valid;
